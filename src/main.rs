@@ -6,10 +6,10 @@ use aes_gcm::{
 };
 
 fn main() -> Result<()> {
-    // 构造具体的算法
+    // construct a specific lattice based algorithm
     let sigalg = sig::Sig::new(sig::Algorithm::Dilithium2)?;
     let kemalg = kem::Kem::new(kem::Algorithm::Kyber512)?;
-    // 构造公私钥  keygen
+    // keygen func
     // A's long-term secrets
     let (a_sig_pk, a_sig_sk) = sigalg.keypair()?;
     // B's long-term secrets
