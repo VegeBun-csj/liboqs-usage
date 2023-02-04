@@ -1,0 +1,16 @@
+[package]
+name = "usage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aes = "0.8.2"
+aes-gcm = "0.10.1"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.oqs]
+version = "*"
+default-features = false
+features = ["sigs", "kems"]
+
